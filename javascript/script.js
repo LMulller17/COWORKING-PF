@@ -1,45 +1,65 @@
 
-const cloud = document.getElementById("cloud");
-const barraLateral = document.querySelector(".barra-lateral");
-const spans = document.querySelectorAll("span");
-const palanca = document.querySelector(".switch");
-const circulo = document.querySelector(".circulo");
-const menu = document.querySelector(".menu");
-const main = document.querySelector("main");
+Swal.fire({
+    title: "Bienvenido",
+    text: "Estas intereado en venir a conocernos?",
+   // html:
+    icon: "warning",
+    confirmButtonText: "Confirmar",
+    footer: "Esta es informacion importante",
+    width: "90%",
+    padding: "1rem",
+   // background: "blue",///////
+    grow: "row",
+    backdrop: true,
+   // timer:
+   // timerProgressBar:
+   // toast:
+    position: "center",
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    allowEnterKey: false,
+    stopKeydownPropagation: false,
 
-menu.addEventListener("click",()=>{
-    barraLateral.classList.toggle("max-barra-lateral");
-    if(barraLateral.classList.contains("max-barra-lateral")){
-        menu.children[0].style.display = "none";
-        menu.children[1].style.display = "block";
-    }
-    else{
-        menu.children[0].style.display = "block";
-        menu.children[1].style.display = "none";
-    }
-    if(window.innerWidth<=320){
-        barraLateral.classList.add("mini-barra-lateral");
-        main.classList.add("min-main");
-        spans.forEach((span)=>{
-            span.classList.add("oculto");
-        })
-    }
+   // input:
+   // inputPlaceholder:
+   // inputValue:
+   // inputOptions:
+
+    //customClass:
+        //container:
+        //popup:
+        //header:
+        //title:
+        //closeButton:
+        //icon:
+        //image:
+        //content:
+        //input:
+        //actions:
+        //confirmButton:
+        //cancelButton:s
+        //footer:	
+    
+
+    showConfirmButton: "true",
+    confirmButtonColor: "black",
+    confirmButtonAriaLabel: "Confirtmar",
+
+    showCancelButton: "true",
+    cancelButtonText: "Cancelar",
+   // cancelButtonColor:
+    cancelButtonAriaLabel: "Cancelar",
+
+   // buttonsStyling:
+   // showCloseButton:
+   // closeButtonAriaLabel:
+
+
+   //imageUrl: 
+   //imageWidth: ,
+   // imageHeight:
+   // imageAlt: 
 });
-
-palanca.addEventListener("click",()=>{
-    let body = document.body;
-    body.classList.toggle("dark-mode");
-    body.classList.toggle("");
-    circulo.classList.toggle("prendido");
-});
-
-cloud.addEventListener("click",()=>{
-    barraLateral.classList.toggle("mini-barra-lateral");
-    main.classList.toggle("min-main");
-    spans.forEach((span)=>{
-        span.classList.toggle("oculto");
-    });
-});//
 
 
 

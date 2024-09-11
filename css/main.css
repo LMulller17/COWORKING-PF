@@ -1,4 +1,4 @@
- 
+
 :root {
     --bg-color: #262526;
     --second-bg-color: #0D0D0D;
@@ -24,7 +24,8 @@ estilo de boddy
 body{
     width: 100%;
     height: 100vh;
-    background-color: var(--main-color)
+    background-color: var(--main-color);
+    font-family: sans-serif;
 }
 
 
@@ -53,7 +54,7 @@ nav{
 }
 header nav ul li{
     display: inline-block;
-    padding: 0px 10px;
+    padding: 0 30px 0 0;
 }
 a{
     color: var(--text-color);
@@ -62,46 +63,166 @@ a{
 a:hover{
     color: var(--second-text-color);
 }
+@media screen and (max-width:500px){
+    header{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    header nav ul li{
+        text-align: center;
+        margin: 10px 20px;
+    }
+}
 
 
 /*
 estilo index-main
 */
-.nosotrosMain{
-    margin: 30px 30px;
-    display: grid;
+.index-principal{
+    width: auto;
+    height: auto;
 }
-.nosotrosTitulo{
-    padding: 15px;
-    justify-content: center;
+.index-principal h1{
+    font-size: 55px;
+    color: var(--text-color);
     text-align: center;
+    margin: 20px 500px;
+    overflow: hidden;
+    animation: anim 1s infinite linear;
 }
-.texto{
-    margin: auto;
-    text-decoration: solid;
-    text-align: center;
-    font-size: 20px;
+@keyframes anim {
+    0%{
+        color: #555;
+        text-shadow: none;
+    }
+    10%{
+        color: #555;
+        text-shadow: none;
+    }
+    20%{
+        color:var(--text-color);
+        text-shadow: 0 0 1vw #ffc400, 0 0 3vw #f44336;
+    }
+    30%{
+        color: #555;
+        text-shadow: none;
+    }
+    35%{
+        color:var(--text-color);
+        text-shadow: 0 0 1vw #ffc400, 0 0 3vw #f44336;
+    }
+    70%{
+        color: #555;
+        text-shadow: none;
+    }
+    85%{
+        color: var(--text-color);
+        text-shadow: 0 0 1vw #ffc400, 0 0 3vw #f44336;
+    }
+    90%{
+        color: #555;
+        text-shadow: none;
+    }
+    100%{
+        color: #555;
+        text-shadow: none;
+    }
 }
-.texto2{
-    margin: auto;
-    padding-bottom: 30px;
-    text-decoration: solid;
-    text-align: center;
-    font-size: 20px;
+.index-principal h1:nth-child(1) {
+    animation-delay: .2s ;
 }
-.contenedorImg{
+.index-principal h1:nth-child(2) {
+    animation-delay: .4s ;
+}
+.index-principal h1:nth-child(3) {
+    animation-delay: .6s ;
+}
+.index-principal h1:nth-child(4) {
+    animation-delay: .8s ;
+}
+.index-principal h1:nth-child(5) {
+    animation-delay: 1s ;
+}
+.index-principal h1:nth-child(6) {
+    animation-delay: 1.2s ;
+}
+.index-principal h1:nth-child(7) {
+    animation-delay: 1.4s ;
+}
+.index-principal h1:nth-child(8) {
+    animation-delay: 1.6s ;
+}
+.index-principal h1:nth-child(9) {
+    animation-delay: 1.8s ;
+}
+.index-principal h1:nth-child(10) {
+    animation-delay: 2s ;
+}
+.index-principal h1:nth-child(11) {
+    animation-delay: 2.2s ;
+}
+.index-principal h1:nth-child(12) {
+    animation-delay: 2.4s ;
+}
+.index-principal h1:nth-child(13) {
+    animation-delay: 2.6s ;
+}
+.index-principal h1:nth-child(14) {
+    animation-delay: 2.8s ;
+}
+.index-principal h1:nth-child(15) {
+    animation-delay: 3s ;
+}
+.index-secundario{
+    color: var(--second-text-color);
+    margin:  0 50px;
+    font-size: x-large;
+    font-family: sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
-.imgNosotros{
-    width: 750px;
-    height: 500px;
-    margin-right: 25px;    
+.index-secundario .texto{
+    text-align: center;
 }
-.imgNosotros2{
-    width: 750px;
-    height: 500px;
-    
+.index-tercero{
+    font-size: 60px;
+    color: var(--text-color);
+    text-align: center;
+    margin: 30px 30px;
+    overflow: hidden;
+}
+.index-titulo2 h3{
+    background-color: yellow;
+    font-size: 50px;
+}
+.index-titulo2 .texto{
+    text-align: center;
+    font-size: 20px;
+
+}
+.index-Img{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50%);
+    column-gap: 1rem;
+    align-content: center;
+}
+.index-Img img{
+    width: 100%;
+    height: 100%;
+}
+.index-Img .imagen-tres{
+    margin: 10px 0;
+    align-items: center;
+    grid-column: span 2;
+}
+@media screen and (max-width:500px){
+    .index-principal h1{
+        margin: 50px 20px;
+    } 
 }
 
 
@@ -235,7 +356,13 @@ estilos de los espacios - main
 @media screen and (max-width:500px){
     .container-losEspacios{
         width: 90%;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container-losEspacios .card-losEspacios:nth-child(1){
+        grid-column-start: span 2;
+    }
+    .container-losEspacios .card-losEspacios:nth-child(7){
+        grid-column-start: span 2;
     }
     .container-losEspacios .card-losEspacios img{
         height: 200px;
@@ -245,6 +372,7 @@ estilos de los espacios - main
 
 
 /* estilos planes y servicios - main */
+/* servicios */
 .card-principal{
     width: auto;
     height: auto;
@@ -257,7 +385,6 @@ estilos de los espacios - main
     border-radius: 20px;
 }
 .card-secundarias{
-    background-color: yellow;  
     margin:  0 50px;
     display: grid;
     grid-template-columns:repeat(4, 1fr);
@@ -275,11 +402,54 @@ estilos de los espacios - main
     background-color: var(--text-color);
     color: var(--second-bg-color);
     translate: scale(1.1);
+    
 }
 .cards-servicios h5{
     text-align: center;
 }
-
+/* planes */
+.card-planes{
+    width: auto;
+    height: auto;
+}
+.card-planes h2{
+    background-color: var(--second-text-color);
+    color: var(--text-color);
+    text-align: center;
+    margin: 20px 500px; 
+    border-radius: 20px;
+}
+.card-subPlanes{
+    margin:  30px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;  
+}
+.card-planasos{
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+    margin:  20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.card-planasos:hover{
+    background-color: var(--text-color);
+    color: var(--second-bg-color);
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+@media screen and (max-width:500px){
+    .card-secundarias{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-subPlanes{
+        display: flex;
+        flex-direction: column; 
+    }
+}
 /*
 estilos del footer
 */
@@ -301,9 +471,7 @@ footer{
     padding: 1em;
     font-size: 16px;
     }
-footer div a{
-    height: 50px;
-    width: 50px;
+footer div .redes{
     padding: 5px;
     margin: 20px; 
 
